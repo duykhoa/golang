@@ -1,0 +1,4 @@
+#!/bin/bash
+set -e
+
+docker run -v `pwd`/src:/src golang:alpine go run /src/main.go
