@@ -5,7 +5,12 @@ import (
 )
 
 func main() {
-  scores := []int{1, 2, 3, 4, 5}
-  scores = scores[0:4]
-  fmt.Println(scores)
+  a := 8
+  test(&a)
+
+  fmt.Println(a)
+}
+
+func test(xPtr *int) {
+  *xPtr = *xPtr * *xPtr
 }
