@@ -5,12 +5,12 @@ import (
 )
 
 func main() {
-  a := 8
-  test(&a)
+  a, b := 1, 2
+  swap(&a, &b)
 
-  fmt.Println(a)
+  fmt.Println(a, b)
 }
 
-func test(xPtr *int) {
-  *xPtr = *xPtr * *xPtr
+func swap(x *int, y *int) {
+  *x, *y = *y, *x
 }
